@@ -1,5 +1,7 @@
 # WhatsappClone
 
+<img width="1384" alt="Capture d’écran 2022-01-13 à 23 37 41" src="https://user-images.githubusercontent.com/18016644/149420246-976ac445-0fe9-48e1-9f5b-95bc352cac13.png">
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
 ## Development server
@@ -25,5 +27,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-<img width="462" alt="phoneIcon" src="https://user-images.githubusercontent.com/18016644/149418678-2ee443ce-d2c1-4088-90b5-a2198fcfd682.png">
+
 
