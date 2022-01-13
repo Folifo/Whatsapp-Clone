@@ -30,4 +30,28 @@
         display: block;
     }
 
+    #chat{
+        background-color: #f7f9fa;
+        flex-grow: 1;
+        #chatPlaceholder{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+            h2{
+                font-size: 35px;
+                font-weight: normal;
+                color: #5555;
+            }
+            .separator{
+                width: 50%;
+                border-top: 1px solid #eaeaea;
+            }
+            p{
+                text-align: center;
+            }
+        }
+    }
+
 }

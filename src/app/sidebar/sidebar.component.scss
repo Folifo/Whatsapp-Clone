@@ -4,43 +4,122 @@
     border-right: 1px solid #e1e4e5;
     display: flex;
     flex-direction: column;
-    #sidebarHeader{
-       flex-basis: 67px;
-       background-color: #eeeeee;
+    #row{
+        display: flex;
+        flex-direction: column;
+        #sidebarHeader{
+            flex-basis: 67px;
+            background-color: #eeeeee;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            justify-content: space-between;
+            .avatarContainer{
+             flex-basis: 43px;
+             height: 43px;
+             img{
+                 height: 100%;
+             }
+            }
+            .actionsContainer{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                width: 90px;
+                justify-content: space-between;
+                img{
+                 width: 26px;
+                }
+              
+            }
+         }
+         #searchBox{
+            flex-basis: 50px;
+            background-color: #fbfbfb;
+            border-bottom: 1px solid #e1e4e5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                position: absolute;
+                left: 30px;
+            }
+            input{
+             width: calc(90% - 60px);
+             border: none;
+             border-radius: 20px;
+             height: 70%;
+             padding-left: 60px;
+             outline: none;
+             color: #a9a9a9;
+             outline: none;
+             box-shadow: #efefef;
+             &::placeholder{
+                 color: #a9a9a9;
+             }
+            }
+         }
     }
-    #searchBox{
-       flex-basis: 50px;
-       background-color: #fbfbfb;
-       border-bottom: 1px solid #e1e4e5;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       img{
-           position: absolute;
-           left: 30px;
-       }
-       input{
-        width: calc(90% - 60px);
-        border: none;
-        border-radius: 20px;
-        height: 70%;
-        padding-left: 60px;
-        outline: none;
-        color: #a9a9a9;
-        outline: none;
-        box-shadow: #efefef;
-        &::placeholder{
-            color: #a9a9a9;
-        }
-       }
-    }
+    
     #noConversations{
         padding-top: 30px;
         text-align: center;
         color: #b9b9b9;
         font-size: 18px;
-        font-family: sans-serif;
         font-weight: 100;
+    }
+
+    #sidebarContent{
+        flex-grow: 1 ;
+        overflow: auto;
+        .conversation{
+            padding-right: 5px;
+            height: 67px;
+            display: flex;
+            
+            &:hover{
+                background-color: rgba($color: #ccc, $alpha: 0.2);
+            }
+            .picture{
+                flex-basis: 73px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                img{
+                    max-width: 100%;
+                    width: 80px;
+                    //padding-left: 2px;
+                }
+            }
+            .content{
+                border-bottom: 1px solid #f2f2f2;
+                padding-left: 10px 0px;
+                flex-grow: 1;
+                padding-right: 10px;
+                overflow: auto;
+                .conversationHeader{
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  .time{
+                      color: #979797;
+                      font-size: 13px;
+                      padding-top: 4px;
+                  }
+                  .name{
+                    color: #040404;
+                    padding-top: 4px;
+                  }
+                }
+                .message{
+                   color: #717171;
+                   font-size: 13px;
+                   margin-top: 10px;
+                }
+            }
+        }
     }
 
 }
