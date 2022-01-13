@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Conversation } from './models/conversation';
+import { ConversationsService } from './services/conversations.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'whatsapp-clone';
+  conversation!:Conversation;
+  constructor(private conv: ConversationsService){}
+
+  onConversationSelected(conversation:Conversation){
+      this.conversation = conversation 
+  }
 }

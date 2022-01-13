@@ -18,8 +18,9 @@
    
 
     <div id="sidebarContent">
-      <!--<div id="noConversations">All chats are archived</div>-->
-      <div class="conversation" *ngFor="let conv of conversations">
+      <div *ngIf="!conversations" id="noConversations">All chats are archived</div>
+      <div class="conversation" *ngFor="let conv of conversations"
+        (click)="conversationClicked.emit(conv)">
           <div class="picture">
             <img src="../../assets/images/avatar.svg"/>
           </div>

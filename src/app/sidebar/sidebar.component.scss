@@ -31,6 +31,7 @@
                 justify-content: space-between;
                 img{
                  width: 26px;
+                 cursor: pointer;
                 }
               
             }
@@ -78,6 +79,7 @@
             padding-right: 5px;
             height: 67px;
             display: flex;
+            cursor: pointer;
             
             &:hover{
                 background-color: rgba($color: #ccc, $alpha: 0.2);
