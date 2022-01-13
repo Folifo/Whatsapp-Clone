@@ -1,8 +1,10 @@
 # WhatsappClone
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+
 <img width="1384" alt="Capture d’écran 2022-01-13 à 23 37 41" src="https://user-images.githubusercontent.com/18016644/149420246-976ac445-0fe9-48e1-9f5b-95bc352cac13.png">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+
 
 ## Development server
 
