@@ -12,14 +12,14 @@
         </div>
          <div id="searchBox">
            <img width="15" src="../assets/images/searchIcon.png"/>
-           <input type="text" placeholder="Search or start new chat">
+           <input [(ngModel)]="searchText" type="text" placeholder="Search or start new chat">
          </div>
     </div>
    
 
     <div id="sidebarContent">
       <div *ngIf="!conversations" id="noConversations">All chats are archived</div>
-      <div class="conversation" *ngFor="let conv of conversations"
+      <div class="conversation" *ngFor="let conv of !searchText ? conversations:filteredConversations"
         (click)="conversationClicked.emit(conv)">
           <div class="picture">
             <img src="../../assets/images/avatar.svg"/>

@@ -1,5 +1,16 @@
 <div id="container">
-  <div id="header"></div>
+  <div id="header">
+      <div class="avatarSection">
+          <div class="picture">
+            <img src="../../assets/images/avatar.svg"/>
+          </div>
+          <div class="nameSection">{{conversation.name}}</div>
+      </div>
+      <div class="actionButtons">
+        <img src="../../assets/images/attachmentIcon.svg"/>
+        <img src="../../assets/images/vertIcon.svg"/>
+      </div>
+  </div>
   <div id="body">
       <div class="message" [ngClass]="{me:message.me}" *ngFor="let message of conversation.messages">
           <div class="messageContent">
@@ -10,10 +21,12 @@
   </div>
   <div id="footer">
       <div id="smileyIcon">
-          <img src="../../assets/images/smiley.svg"/>
+          <img (click)="emojiVisible=!emojiVisible" src="../../assets/images/smiley.svg"/>
+          <emoji-mart *ngIf="emojiVisible"
+          [darkMode]="false" title="Pick your emoji…" emoji="point_up" (emojiClick)="addEmoji($event)"></emoji-mart>
       </div>
       <div id="textArea">
-          <textarea (keyup.enter)="submitMessage($event)"></textarea>
+          <textarea [(ngModel)]="message" (keyup.enter)="submitMessage($event)"></textarea>
       </div>
       <div id="micIcon">
         <img src="../../assets/images/micIcon.svg"/>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Emoji } from '@ctrl/ngx-emoji-mart/ngx-emoji';
 import { Conversation } from '../models/conversation';
 import { ConversationsService } from '../services/conversations.service';
 
@@ -10,12 +11,21 @@ import { ConversationsService } from '../services/conversations.service';
 export class ChatComponent implements OnInit {
 
   @Input() conversation!:Conversation;
-  constructor(private conv: ConversationsService) { }
-
+  message='';
+  constructor(private convService: ConversationsService) { }
+  emojiVisible:boolean=false;
   ngOnInit(): void {
   }
+
+  
   submitMessage(event:any){
-    alert(event.target.value)
+    this.convService.submitMessage(event,this.conversation); 
+    this.message=''; 
+    this.emojiVisible=false;
+  }   
+
+  addEmoji(event:any){
+  this.message += event.emoji.native
   }
 
 }
